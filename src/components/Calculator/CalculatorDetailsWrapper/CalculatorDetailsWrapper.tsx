@@ -1,4 +1,4 @@
-import CalculatorDetailsValues from "../CalculatorDetailsValues";
+import CalculatorDetailsValues from "@components/Calculator/CalculatorDetailsValues";
 import * as Styled from "./CalculatorDetailsWrapper.styles";
 
 export default function CalculatorDetailsWrapper() {
@@ -7,10 +7,7 @@ export default function CalculatorDetailsWrapper() {
       <Styled.WrapperArticle>
         <Styled.Title>Você Receberá:</Styled.Title>
 
-        <CalculatorDetailsValues
-          values={{}}
-          isLoading={false}
-        />
+        <CalculatorDetailsValues values={{}} isLoading={false} />
       </Styled.WrapperArticle>
     </Styled.Wrapper>
   );

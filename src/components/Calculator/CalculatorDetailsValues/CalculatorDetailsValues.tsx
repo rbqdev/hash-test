@@ -1,8 +1,8 @@
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import formatNumber, { currencyConfigs } from "../../../utils/formatNumber";
-import getListOfDays from "../../../utils/getListOfDays";
-import getTextDay from "../../../utils/getTextDay";
-import { _commonColors } from "../../../styles/themes";
+import formatNumber, { currencyConfigs } from "@utils/formatNumber";
+import getListOfDays from "@utils/getListOfDays";
+import getTextDay from "@utils/getTextDay";
+import { _commonColors } from "@styles/themes";
 import * as Styled from "./CalculatorDetailsValues.styles";
 
 export interface Props {

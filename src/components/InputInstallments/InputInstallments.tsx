@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import InputText, { CustomInputProps } from "../InputText";
-import getOnlyDigits from "../../utils/getOnlyDigits";
+import InputText, { CustomInputProps } from "@components/InputText";
+import getOnlyDigits from "@utils/getOnlyDigits";
 
 export const LABEL_INSTALLMENTS = "Em quantas parcelas *";
 

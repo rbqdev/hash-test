@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { CallbackInputPayload } from "../../../components/InputText";
-import InputAmmount from "../../../components/InputAmmount";
-import InputInstallments from "../../../components/InputInstallments";
-import InputMdr from "../../../components/InputMdr";
+import { CallbackInputPayload } from "@components/InputText";
+import InputAmmount from "@components/InputAmmount";
+import InputInstallments from "@components/InputInstallments";
+import InputMdr from "@components/InputMdr";
 import {
   NAME_AMMOUNT,
   NAME_INSTALLMENTS,
   NAME_MDR
-} from "../../../components/Calculator/constants";
+} from "@components/Calculator/constants";
 
 import * as Styled from "./CalculatorForm.styles";
 import formRules from "./rules";

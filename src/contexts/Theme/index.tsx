@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from "react";
 import { ThemeProvider, DefaultTheme } from "styled-components";
-import ToggleTheme from "../../components/ToggleTheme";
+import ToggleTheme from "@components/ToggleTheme";
 import {
   light as themeLight,
   dark as themeDark,
   _constants as themeConstants
-} from "../../styles/themes";
+} from "@styles/themes";
 import ButtonWrapper from "./Theme.styles";
 
 interface IThemeContext {

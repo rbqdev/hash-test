@@ -1,5 +1,5 @@
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
-import { _constants as themeConstants } from "../../styles/themes";
+import { _constants as themeConstants } from "@styles/themes";
 import Wrapper from "./ToggleTheme.styles";
 
 const { THEME_LIGHT } = themeConstants;

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { lighten } from "polished";
-import { _constants as themeConstants } from "../../../styles/themes";
+import { _constants as themeConstants } from "@styles/themes";
 import media from "styled-media-query";
 
 const { THEME_LIGHT } = themeConstants;

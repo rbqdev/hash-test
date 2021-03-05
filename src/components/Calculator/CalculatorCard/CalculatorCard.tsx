@@ -1,5 +1,5 @@
-import CalculatorForm from "../CalculatorForm";
-import CalculatorDetailsWrapper from "../CalculatorDetailsWrapper";
+import CalculatorForm from "@components/Calculator/CalculatorForm";
+import CalculatorDetailsWrapper from "@components/Calculator/CalculatorDetailsWrapper";
 import * as Styled from "./CalculatorCard.styles";
 
 export default function CalculatorCard() {

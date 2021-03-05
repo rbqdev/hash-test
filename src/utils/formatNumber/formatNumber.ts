@@ -1,4 +1,4 @@
-import getOnlyDigits from "../getOnlyDigits";
+import getOnlyDigits from "@utils/getOnlyDigits";
 interface FormatNumber {
   value: string;
   style: string;

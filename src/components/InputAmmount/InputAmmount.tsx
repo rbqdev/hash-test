@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
-import formatNumber, { currencyConfigs } from "../../utils/formatNumber";
-import getOnlyDigits from "../../utils/getOnlyDigits";
-import InputText, { CustomInputProps } from "../InputText";
+import formatNumber, { currencyConfigs } from "@utils/formatNumber";
+import getOnlyDigits from "@utils/getOnlyDigits";
+import InputText, { CustomInputProps } from "@components/InputText";
 
 export const LABEL_AMMOUNT = "Informe o valor da venda *";
 

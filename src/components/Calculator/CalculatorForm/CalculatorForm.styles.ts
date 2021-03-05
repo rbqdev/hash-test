@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { _constants as themeConstants } from "../../../styles/themes";
+import { _constants as themeConstants } from "@styles/themes";
 import media from "styled-media-query";
 
 const { THEME_LIGHT } = themeConstants;
