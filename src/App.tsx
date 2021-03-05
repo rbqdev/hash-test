@@ -1,6 +1,20 @@
+import { CustomThemeProvider } from "./contexts/Theme";
+import CalculatorCard from "./components/Calculator/CalculatorCard";
+import GlobalStyle, { AppWrapper, ScreenReaderText } from "./styles/global";
+
 function App() {
   return (
-    <div className="App"></div>
+    <CustomThemeProvider>
+      <GlobalStyle />
+
+      <AppWrapper>
+        <ScreenReaderText>
+          <h1>Calculdora de Antecipação</h1>
+        </ScreenReaderText>
+
+        <CalculatorCard />
+      </AppWrapper>
+    </CustomThemeProvider>
   );
 }
 
