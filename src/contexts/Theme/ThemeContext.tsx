@@ -6,7 +6,7 @@ import {
   dark as themeDark,
   _constants as themeConstants
 } from "@styles/themes";
-import ButtonWrapper from "./Theme.styles";
+import ButtonWrapper from "./ThemeContext.styles";
 
 interface IThemeContext {
   theme: DefaultTheme;
