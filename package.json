@@ -28,6 +28,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test:unit": "react-app-rewired test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
