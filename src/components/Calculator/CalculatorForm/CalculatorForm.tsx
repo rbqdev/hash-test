@@ -50,7 +50,9 @@ export default function CalculatorForm() {
     [NAME_MDR]: DeafaultFormValues
   });
 
-  const { isLoading, requestAnticipation } = useContext(CalculatorContext);
+  const { isLoading, requestTakeToLong, requestAnticipation } = useContext(
+    CalculatorContext
+  );
 
   const handleChangeInput = ({ value, name }: CallbackInputPayload): void => {
     const numberValue = Number(value);
@@ -111,7 +113,15 @@ export default function CalculatorForm() {
         />
       </form>
 
-      {isLoading && <Loader />}
+      {isLoading && (
+        <Loader
+          customText={
+            requestTakeToLong
+              ? "A requisição ainda está processamento, aguarde..."
+              : ""
+          }
+        />
+      )}
     </Styled.Wrapper>
   );
 }

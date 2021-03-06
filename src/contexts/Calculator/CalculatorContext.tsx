@@ -21,6 +21,7 @@ export const CalculatorProvider: React.FunctionComponent = ({ children }) => {
     response,
     error,
     isLoading,
+    requestTakeToLong,
     dispatchRequest,
     resetFetchValues
   } = useFetch();
@@ -39,6 +40,7 @@ export const CalculatorProvider: React.FunctionComponent = ({ children }) => {
         response,
         error,
         isLoading,
+        requestTakeToLong,
         requestAnticipation,
         resetFetchValues
       }}
