@@ -22,16 +22,14 @@ export default function CalculatorDetailsValues({
     <Styled.List>
       {listOfDays.map(day => (
         <Styled.ListItem key={day}>
-          {isLoading && (
+          {isLoading ? (
             <SkeletonTheme
               color={_commonColors.info}
               highlightColor={_commonColors.grey}
             >
               <Skeleton width={140} />
             </SkeletonTheme>
-          )}
-
-          {!isLoading && day && (
+          ) : (
             <>
               <h3>{getTextDay(day)}:</h3>
               <strong>

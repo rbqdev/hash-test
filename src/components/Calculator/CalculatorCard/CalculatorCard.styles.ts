@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   display: flex;
   border: 1px solid
     ${({ theme: { title, colors } }) =>
-    title === THEME_LIGHT ? colors.border : lighten(0.1, colors.secondaryBg)};
+      title === THEME_LIGHT ? colors.border : lighten(0.1, colors.secondaryBg)};
   border-radius: 4px;
   background: ${({ theme: { title, colors } }) =>
     title === THEME_LIGHT ? colors.white : colors.secondaryBg};

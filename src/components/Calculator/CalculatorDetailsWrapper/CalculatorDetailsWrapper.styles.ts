@@ -46,7 +46,7 @@ export const Title = styled.h2`
   text-transform: uppercase;
   border-bottom: 1px solid
     ${({ theme: { title, colors } }) =>
-    title === THEME_LIGHT ? colors.blueBorderLight : colors.border};
+      title === THEME_LIGHT ? colors.blueBorderLight : colors.border};
   color: ${({ theme }) => theme.colors.blue};
   font-size: 16px;
   font-weight: bold;

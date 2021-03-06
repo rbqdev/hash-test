@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CallbackInputPayload } from "@components/InputText";
+import CalculatorContext from "@contexts/Calculator";
+import Loader from "@components/Loader";
 import InputAmmount from "@components/InputAmmount";
 import InputInstallments from "@components/InputInstallments";
 import InputMdr from "@components/InputMdr";
 import {
   NAME_AMMOUNT,
   NAME_INSTALLMENTS,
-  NAME_MDR
+  NAME_MDR,
+  DEBOUNCE_TIME_FOR_TRIGGER_REQUEST
 } from "@components/Calculator/constants";
+import useDebounce from "@hooks/useDebounce/useDebounce";
+import getListOfDays from "@utils/getListOfDays";
 
 import * as Styled from "./CalculatorForm.styles";
 import formRules from "./rules";
@@ -28,12 +33,24 @@ function validateInput(name: string, value: number): boolean {
   return formRules[name](value);
 }
 
+function validateForm(
+  callback: (payload: boolean) => void,
+  formValues: FormState
+): void {
+  const isFormInvalid = Object.keys(formValues).some(key =>
+    validateInput(key, formValues[key].value)
+  );
+  callback(isFormInvalid);
+}
+
 export default function CalculatorForm() {
   const [formValues, setFormValues] = useState<FormState>({
     [NAME_AMMOUNT]: DeafaultFormValues,
     [NAME_INSTALLMENTS]: DeafaultFormValues,
     [NAME_MDR]: DeafaultFormValues
   });
+
+  const { isLoading, requestAnticipation } = useContext(CalculatorContext);
 
   const handleChangeInput = ({ value, name }: CallbackInputPayload): void => {
     const numberValue = Number(value);
@@ -46,6 +63,31 @@ export default function CalculatorForm() {
       }
     });
   };
+
+  const sendRequest = async (): Promise<void> => {
+    const days = getListOfDays();
+
+    await requestAnticipation({
+      amount: formValues[NAME_AMMOUNT].value,
+      installments: formValues[NAME_INSTALLMENTS].value,
+      mdr: formValues[NAME_MDR].value,
+      days
+    });
+  };
+
+  useDebounce(
+    () => {
+      validateForm(isFormInvalid => {
+        if (isFormInvalid) {
+          return;
+        }
+
+        sendRequest();
+      }, formValues);
+    },
+    DEBOUNCE_TIME_FOR_TRIGGER_REQUEST,
+    [formValues]
+  );
 
   return (
     <Styled.Wrapper>
@@ -68,6 +110,8 @@ export default function CalculatorForm() {
           error={formValues[NAME_MDR].inputInvalid}
         />
       </form>
+
+      {isLoading && <Loader />}
     </Styled.Wrapper>
   );
 }
