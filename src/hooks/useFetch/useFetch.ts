@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import useToast from "@hooks/useToast";
 import getMessageByApiStatus from "@utils/getMessageByApiStatus";
 
 export interface ObjectFetch {
@@ -15,7 +16,7 @@ export interface InitialState extends ObjectFetch {
 interface ResponseFetch extends InitialState {
   dispatchRequest: ({ url, method, body }: DispatchRequestProps) => void;
   resetFetchValues: () => void;
-  stateDispatch: React.Dispatch<ReducerAction<ObjectFetch>>;
+  dispatchState: React.Dispatch<ReducerAction<ObjectFetch>>;
 }
 
 interface DispatchRequestProps {
@@ -70,7 +71,8 @@ function reducer(state: InitialState, action: ReducerAction<ObjectFetch>) {
 }
 
 export default function useFetch(): ResponseFetch {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatchState] = useReducer(reducer, initialState);
+  const { dispatchToast } = useToast();
 
   const dispatchRequest = async ({
     url,
@@ -82,14 +84,14 @@ export default function useFetch(): ResponseFetch {
     }
 
     const timerControl = setTimeout(() => {
-      dispatch({
+      dispatchState({
         type: ACTIONS.SET_REQUEST_TAKE_TO_LONG,
         payload: { value: true }
       });
     }, TIME_TO_AWAIT_API);
 
     try {
-      dispatch({ type: ACTIONS.SET_IS_LOADING, payload: { value: true } });
+      dispatchState({ type: ACTIONS.SET_IS_LOADING, payload: { value: true } });
 
       const apiResponse = await fetch(url, {
         headers: { "Content-Type": "application/json" },
@@ -102,7 +104,7 @@ export default function useFetch(): ResponseFetch {
       if (isRequestSuccess) {
         const responseParsed = await apiResponse.json();
 
-        dispatch({
+        dispatchState({
           type: ACTIONS.SET_RESPONSE,
           payload: { value: responseParsed }
         });
@@ -110,14 +112,15 @@ export default function useFetch(): ResponseFetch {
         throw Error(getMessageByApiStatus(apiResponse.status));
       }
     } catch (err) {
-      dispatch({ type: ACTIONS.SET_ERROR, payload: { value: err } });
+      dispatchState({ type: ACTIONS.SET_ERROR, payload: { value: err } });
+      dispatchToast({ message: err.message, type: "error", duration: 3000 });
     } finally {
       clearTimeout(timerControl);
 
       const { SET_IS_LOADING, SET_REQUEST_TAKE_TO_LONG } = ACTIONS;
 
       [SET_IS_LOADING, SET_REQUEST_TAKE_TO_LONG].forEach(action => {
-        dispatch({
+        dispatchState({
           type: action,
           payload: { value: false }
         });
@@ -126,7 +129,7 @@ export default function useFetch(): ResponseFetch {
   };
 
   const resetFetchValues = (): void => {
-    dispatch({ type: ACTIONS.RESET_VALUES });
+    dispatchState({ type: ACTIONS.RESET_VALUES });
   };
 
   const { response, error, isLoading, requestTakeToLong } = state;
@@ -138,6 +141,6 @@ export default function useFetch(): ResponseFetch {
     requestTakeToLong,
     dispatchRequest,
     resetFetchValues,
-    stateDispatch: dispatch
+    dispatchState
   };
 }

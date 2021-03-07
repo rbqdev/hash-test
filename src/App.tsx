@@ -1,4 +1,5 @@
 import { CustomThemeProvider } from "@contexts/Theme";
+import { ToastProvider } from "@contexts/Toast";
 import CalculatorCard from "@components/Calculator/CalculatorCard";
 import GlobalStyle, { AppWrapper, ScreenReaderText } from "@styles/global";
 
@@ -12,7 +13,9 @@ function App() {
           <h1>Calculdora de Antecipação</h1>
         </ScreenReaderText>
 
-        <CalculatorCard />
+        <ToastProvider>
+          <CalculatorCard />
+        </ToastProvider>
       </AppWrapper>
     </CustomThemeProvider>
   );
