@@ -107,7 +107,7 @@ export default function useFetch(): ResponseFetch {
           payload: { value: responseParsed }
         });
       } else {
-        throw Error("Alguma coisa deu errado, tente novamente mais tarde.");
+        throw Error(getMessageByApiStatus(apiResponse.status));
       }
     } catch (err) {
       dispatch({ type: ACTIONS.SET_ERROR, payload: { value: err } });
