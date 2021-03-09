@@ -63,7 +63,7 @@ describe("Component: CalculatorForm", () => {
       ["value === 0", "0"],
       ["value > 100000000", "100000001"]
     ])(
-      `should invalidate input ${NAME_AMMOUNT} if value not passaed on rule: '%s'`,
+      `should invalidate input ${NAME_AMMOUNT} if value not passed on rule: '%s'`,
       async (_, value) => {
         const input = screen.getByRole("textbox", {
           name: LABEL_AMMOUNT
@@ -81,7 +81,7 @@ describe("Component: CalculatorForm", () => {
       ["value === 0", "0"],
       ["value > 12", "13"]
     ])(
-      `should invalidate input ${NAME_INSTALLMENTS} if value not passaed on rule: '%s'`,
+      `should invalidate input ${NAME_INSTALLMENTS} if value not passed on rule: '%s'`,
       async (_, value) => {
         const input = screen.getByRole("textbox", {
           name: LABEL_INSTALLMENTS
@@ -153,7 +153,7 @@ describe("Component: CalculatorForm", () => {
     const requestLongMessage =
       "A requisição ainda está processamento, aguarde...";
 
-    it("should show loader component when prop 'isLoading' of context are 'true'", async () => {
+    it("should show only loader component when prop 'isLoading' of context are 'true'", async () => {
       const { queryByText } = renderComponent({
         isLoading: true,
         requestTakeToLong: false
@@ -163,7 +163,7 @@ describe("Component: CalculatorForm", () => {
       expect(queryByText(requestLongMessage)).not.toBeInTheDocument();
     });
 
-    it("should show message when prop 'requestTakeToLong' of context are 'true'", async () => {
+    it("should show also message when prop 'isLoading' and 'requestTakeToLong' of context are 'true'", async () => {
       const { queryByText } = renderComponent({
         isLoading: true,
         requestTakeToLong: true
