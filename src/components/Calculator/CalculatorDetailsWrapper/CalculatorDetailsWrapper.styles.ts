@@ -11,6 +11,7 @@ type Props = {
 
 export const Wrapper = styled.article`
   display: flex;
+  overflow: auto;
 
   ${media.greaterThan("medium")`
     width: 100%;
