@@ -75,6 +75,7 @@
       "^@hooks/(.*)": "<rootDir>/src/hooks/$1",
       "^@styles/(.*)": "<rootDir>/src/styles/$1",
       "^@utils/(.*)": "<rootDir>/src/utils/$1",
+      "^@testsUtils/(.*)": "<rootDir>/src/testsUtils/$1",
       "^styled-components": "<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js"
     },
     "clearMocks": true,
