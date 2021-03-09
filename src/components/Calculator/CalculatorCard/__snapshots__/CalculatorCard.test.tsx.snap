@@ -419,6 +419,7 @@ exports[`Component: CalculatorCard should render component correctly 1`] = `
         <div
           aria-hidden="true"
           class="c14"
+          data-testid="overlay-mobile"
         />
       </article>
     </div>

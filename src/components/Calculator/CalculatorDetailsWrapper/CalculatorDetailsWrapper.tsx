@@ -40,6 +40,7 @@ export default function CalculatorDetailsWrapper() {
         onClick={handleOverlayClick}
         isMobileVisible={isMobileVisible}
         aria-hidden={!isMobileVisible}
+        data-testid="overlay-mobile"
       />
     </Styled.Wrapper>
   );

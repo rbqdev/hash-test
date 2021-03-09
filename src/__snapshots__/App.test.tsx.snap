@@ -527,6 +527,7 @@ exports[`App should match snapshot 1`] = `
           <div
             aria-hidden="true"
             class="c18"
+            data-testid="overlay-mobile"
           />
         </article>
       </div>
