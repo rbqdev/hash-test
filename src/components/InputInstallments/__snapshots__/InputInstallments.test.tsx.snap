@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: InputInstallments should render component correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 22px;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c2 {
+  color: #656565;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+
+.c5 {
+  color: #cecece;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c4 {
+  color: #656565;
+  background: #fff;
+  border: 1px solid #d1dce3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 9px 28px 9px 12px;
+  width: 100%;
+  outline: none;
+}
+
+.c4:hover {
+  border: 1px solid #b1c4d0;
+}
+
+.c4:focus {
+  border: 1px solid #66afe9;
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <label
+        class="c1"
+        for="installments"
+      >
+        <span
+          class="c2"
+        >
+          Em quantas parcelas *
+        </span>
+        <div
+          class="c3"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="Em quantas parcelas *"
+            aria-required="true"
+            class="c4"
+            id="installments"
+            name="installments"
+            type="text"
+          />
+        </div>
+        <small
+          class="c5"
+        >
+          Máximo de 12 parcelas
+        </small>
+      </label>
+    </div>
+  </div>
+</body>
+`;

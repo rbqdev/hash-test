@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: CalculatorDetailsValues should render component correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+}
+
+.c1 {
+  color: #5d9cec;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 46px;
+}
+
+.c1 > * {
+  white-space: nowrap;
+}
+
+.c1 h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.c1 strong {
+  margin-left: 3px;
+}
+
+<body>
+  <div>
+    <ul
+      class="c0"
+    >
+      <li
+        class="c1"
+      >
+        <h3>
+          Amanhã
+          :
+        </h3>
+        <strong>
+          R$ 0,00
+        </strong>
+      </li>
+      <li
+        class="c1"
+      >
+        <h3>
+          Em 15 dias
+          :
+        </h3>
+        <strong>
+          R$ 0,00
+        </strong>
+      </li>
+      <li
+        class="c1"
+      >
+        <h3>
+          Em 30 dias
+          :
+        </h3>
+        <strong>
+          R$ 0,00
+        </strong>
+      </li>
+      <li
+        class="c1"
+      >
+        <h3>
+          Em 90 dias
+          :
+        </h3>
+        <strong>
+          R$ 0,00
+        </strong>
+      </li>
+    </ul>
+  </div>
+</body>
+`;

@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+.c1 {
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #bbb;
+  border: 1px solid #d1dce3;
+  border-radius: 4px;
+  height: 25px;
+  min-width: 30px;
+  padding: 0 8px;
+}
+
+.c1 svg {
+  max-width: 15px;
+}
+
+.c1 svg path {
+  fill: #656565;
+}
+
+.c0 {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.c2 {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 22px;
+}
+
+.c7:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c9 {
+  color: #656565;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+
+.c12 {
+  color: #cecece;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c11 {
+  color: #656565;
+  background: #fff;
+  border: 1px solid #d1dce3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 9px 28px 9px 12px;
+  width: 100%;
+  outline: none;
+}
+
+.c11:hover {
+  border: 1px solid #b1c4d0;
+}
+
+.c11:focus {
+  border: 1px solid #66afe9;
+}
+
+.c5 {
+  width: 375px;
+  padding: 41px 70px 44px 56px;
+  border-radius: 4px 0 0 4px;
+  background: #fff;
+}
+
+.c6 {
+  margin-bottom: 22px;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #656565;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+}
+
+.c17 {
+  color: #5d9cec;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 46px;
+}
+
+.c17 > * {
+  white-space: nowrap;
+}
+
+.c17 h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.c17 strong {
+  margin-left: 3px;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.c14 {
+  background: #f7f9fa;
+  padding: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+.c15 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #dfecf8;
+  color: #3d75bb;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.c4 {
+  width: 608px;
+  height: 389px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d1dce3;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+}
+
+@media (max-width:768px) {
+  .c5 {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .c5 form {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c13 {
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c14 {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c14 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    visibility: hidden;
+    z-index: 2;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+}
+
+@media (max-width:768px) {
+  .c18 {
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c4 {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+    overflow: hidden;
+  }
+}
+
+<body>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1"
+        data-testid="btn-toggle-theme"
+      >
+        <svg
+          data-testid="icon-moon"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M195 125c0-26.3 5.3-51.3 14.9-74.1C118.7 73 51 155.1 51 253c0 114.8 93.2 208 208 208 97.9 0 180-67.7 202.1-158.9-22.8 9.6-47.9 14.9-74.1 14.9-106 0-192-86-192-192z"
+          />
+        </svg>
+      </button>
+    </div>
+    <main
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <h1>
+          Calculdora de Antecipação
+        </h1>
+      </div>
+      <div
+        class="c4"
+      >
+        <section
+          class="c5"
+        >
+          <h2
+            class="c6"
+          >
+            Simule sua Antecipação
+          </h2>
+          <form>
+            <div
+              class="c7"
+            >
+              <label
+                class="c8"
+                for="ammount"
+              >
+                <span
+                  class="c9"
+                >
+                  Informe o valor da venda *
+                </span>
+                <div
+                  class="c10"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="Informe o valor da venda *"
+                    aria-required="true"
+                    class="c11"
+                    id="ammount"
+                    name="ammount"
+                    type="text"
+                  />
+                </div>
+                
+              </label>
+            </div>
+            <div
+              class="c7"
+            >
+              <label
+                class="c8"
+                for="installments"
+              >
+                <span
+                  class="c9"
+                >
+                  Em quantas parcelas *
+                </span>
+                <div
+                  class="c10"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="Em quantas parcelas *"
+                    aria-required="true"
+                    class="c11"
+                    id="installments"
+                    name="installments"
+                    type="text"
+                  />
+                </div>
+                <small
+                  class="c12"
+                >
+                  Máximo de 12 parcelas
+                </small>
+              </label>
+            </div>
+            <div
+              class="c7"
+            >
+              <label
+                class="c8"
+                for="mdr"
+              >
+                <span
+                  class="c9"
+                >
+                  Informe o percentual de MDR *
+                </span>
+                <div
+                  class="c10"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="Informe o percentual de MDR *"
+                    aria-required="true"
+                    class="c11"
+                    id="mdr"
+                    name="mdr"
+                    type="text"
+                  />
+                </div>
+                
+              </label>
+            </div>
+          </form>
+        </section>
+        <article
+          class="c13"
+        >
+          <div
+            class="c14"
+          >
+            <h2
+              class="c15"
+            >
+              Você Receberá:
+            </h2>
+            <ul
+              class="c16"
+            >
+              <li
+                class="c17"
+              >
+                <h3>
+                  Amanhã
+                  :
+                </h3>
+                <strong>
+                  R$ 0,00
+                </strong>
+              </li>
+              <li
+                class="c17"
+              >
+                <h3>
+                  Em 15 dias
+                  :
+                </h3>
+                <strong>
+                  R$ 0,00
+                </strong>
+              </li>
+              <li
+                class="c17"
+              >
+                <h3>
+                  Em 30 dias
+                  :
+                </h3>
+                <strong>
+                  R$ 0,00
+                </strong>
+              </li>
+              <li
+                class="c17"
+              >
+                <h3>
+                  Em 90 dias
+                  :
+                </h3>
+                <strong>
+                  R$ 0,00
+                </strong>
+              </li>
+            </ul>
+          </div>
+          <div
+            aria-hidden="true"
+            class="c18"
+          />
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+`;

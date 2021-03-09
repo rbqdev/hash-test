@@ -39,7 +39,7 @@ const InputText = React.forwardRef<
         />
 
         {error && (
-          <Styled.IconError>
+          <Styled.IconError data-testid="icon-error">
             <IoMdAlert />
           </Styled.IconError>
         )}
