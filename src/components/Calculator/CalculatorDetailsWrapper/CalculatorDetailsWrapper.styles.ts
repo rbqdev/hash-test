@@ -5,6 +5,10 @@ import media from "styled-media-query";
 
 const { THEME_LIGHT } = themeConstants;
 
+type Props = {
+  isMobileVisible: boolean;
+};
+
 export const Wrapper = styled.article`
   display: flex;
 
@@ -13,8 +17,8 @@ export const Wrapper = styled.article`
   `}
 `;
 
-export const WrapperArticle = styled.div`
-  ${({ theme: { title, colors } }) => css`
+export const WrapperArticle = styled.div<Props>`
+  ${({ theme: { title, colors }, isMobileVisible }) => css`
     background: ${title === THEME_LIGHT
       ? colors.secondaryBg
       : lighten(0.04, colors.secondaryBg)};
@@ -38,6 +42,14 @@ export const WrapperArticle = styled.div`
       visibility: hidden;
       z-index: 2;
       transition: all 0.2s;
+
+      ${
+        isMobileVisible &&
+        `
+        bottom : 0;
+        visibility: visible;
+      `
+      }
     `}
   `}
 `;
@@ -53,4 +65,27 @@ export const Title = styled.h2`
   padding-bottom: 4px;
   display: block;
   margin-bottom: 15px;
+`;
+
+export const OverlayMobile = styled.div<Props>`
+  ${({ theme, isMobileVisible }) => css`
+    ${media.lessThan("medium")`
+      width: 100%;
+      height: 100%;
+      background: ${theme.colors.blackTransparent};
+      position: fixed;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      
+      ${
+        isMobileVisible &&
+        `
+        visibility: visible;
+        opacity: 1;
+      `
+      }
+    `}
+  `}
 `;

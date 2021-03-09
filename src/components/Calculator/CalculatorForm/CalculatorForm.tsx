@@ -13,7 +13,6 @@ import {
 } from "@components/Calculator/constants";
 import useDebounce from "@hooks/useDebounce/useDebounce";
 import getListOfDays from "@utils/getListOfDays";
-
 import * as Styled from "./CalculatorForm.styles";
 import formRules from "./rules";
 
