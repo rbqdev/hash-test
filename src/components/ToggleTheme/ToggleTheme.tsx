@@ -11,7 +11,11 @@ export interface ToggleThemeProps {
 function ToggleTheme({ themeTitle, trigger }: ToggleThemeProps) {
   return (
     <Wrapper onClick={trigger} data-testid="btn-toggle-theme">
-      {themeTitle !== THEME_LIGHT ? <IoMdSunny /> : <IoMdMoon />}
+      {themeTitle !== THEME_LIGHT ? (
+        <IoMdSunny data-testid="icon-sun" />
+      ) : (
+        <IoMdMoon data-testid="icon-moon" />
+      )}
     </Wrapper>
   );
 }
