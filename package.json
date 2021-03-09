@@ -2,6 +2,16 @@
   "name": "hash-test",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test:unit": "react-app-rewired test",
+    "test:unit:watch": "react-app-rewired test --watch",
+    "test:unit:coverage": "react-app-rewired test --coverage --watchAll=false",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -24,13 +34,13 @@
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test:unit": "react-app-rewired test",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/styled-components": "^5.1.7",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "jest-styled-components": "^7.0.3",
+    "prettier": "^2.2.1",
+    "react-app-rewired": "^2.1.8"
   },
   "eslintConfig": {
     "extends": [
@@ -50,12 +60,36 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.7",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-prettier": "^3.3.0",
-    "jest-styled-components": "^7.0.3",
-    "prettier": "^2.2.1",
-    "react-app-rewired": "^2.1.8"
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/.jest/setup.ts"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/",
+      "<rootDir>/.jest"
+    ],
+    "moduleNameMapper": {
+      "^@components/(.*)": "<rootDir>/src/components/$1",
+      "^@configs/(.*)": "<rootDir>/src/configs/$1",
+      "^@contexts/(.*)": "<rootDir>/src/contexts/$1",
+      "^@hooks/(.*)": "<rootDir>/src/hooks/$1",
+      "^@styles/(.*)": "<rootDir>/src/styles/$1",
+      "^@utils/(.*)": "<rootDir>/src/utils/$1",
+      "^styled-components": "<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js"
+    },
+    "clearMocks": true,
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts(x)?",
+      "!src/**/stories.tsx",
+      "!src/pages/**/*.tsx",
+      "!src/styles/**/*.ts"
+    ]
   }
 }
