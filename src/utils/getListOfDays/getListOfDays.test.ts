@@ -1,26 +1,31 @@
-import getListOfDays, { DEFAULT_DAYS } from "./getListOfDays";
+import getListOfDays, {
+  DEFAULT_DAYS,
+  KEY_PARAM_CUSTOM_DAYS
+} from "./getListOfDays";
 
 describe("Util: getListOfDays", () => {
-  describe("when no have url parms", () => {
+  describe("when no have url params", () => {
     it("should return default days", () => {
       expect(getListOfDays()).toEqual(DEFAULT_DAYS);
     });
   });
 
-  describe("when has url parms", () => {
+  describe("when has url params", () => {
     global.window = Object.create(window);
 
     it("should return days based on params", () => {
+      const params = `?${KEY_PARAM_CUSTOM_DAYS}=[1,15,120]`;
+
       Object.defineProperty(window, "location", {
         value: {
-          href: "http://test-url/?days[1,15,120]",
-          search: "days=[1,15,120]"
+          href: `http://test-url/${params}`,
+          search: `${params}`
         }
       });
 
-      const days = getListOfDays();
+      const daysResult = getListOfDays();
 
-      expect(days).toEqual([1, 15, 120]);
+      expect(daysResult).toEqual([1, 15, 120]);
     });
   });
 });
