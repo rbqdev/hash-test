@@ -7,7 +7,6 @@ export default styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ theme }) => theme.colors.grey};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 4px;
   height: 25px;
@@ -17,7 +16,7 @@ export default styled.button`
   svg {
     max-width: 15px;
     path {
-      fill: ${({ theme }) => theme.colors.text};
+      fill: ${({ theme }) => theme.colors.border};
     }
   }
 `;
