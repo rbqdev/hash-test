@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import useFetch, { InitialState } from "@hooks/useFetch/useFetch";
-import api from "@configs/api";
+import getUrlAnticipation from "@utils/getUrlAnticipation";
 
 interface RequestBody {
   amount: number;
@@ -27,8 +27,10 @@ export const CalculatorProvider: React.FunctionComponent = ({ children }) => {
   } = useFetch();
 
   const requestAnticipation = async (payload: RequestBody): Promise<void> => {
+    const url = getUrlAnticipation();
+
     await dispatchRequest({
-      url: `${api.baseUrl}`,
+      url,
       method: "POST",
       body: payload
     });
