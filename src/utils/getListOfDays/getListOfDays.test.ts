@@ -4,13 +4,13 @@ import getListOfDays, {
 } from "./getListOfDays";
 
 describe("Util: getListOfDays", () => {
-  describe("when no have url params", () => {
+  describe("when there is not params on url", () => {
     it("should return default days", () => {
       expect(getListOfDays()).toEqual(DEFAULT_DAYS);
     });
   });
 
-  describe("when has url params", () => {
+  describe("when there are params on url", () => {
     global.window = Object.create(window);
 
     it("should return days based on params", () => {
