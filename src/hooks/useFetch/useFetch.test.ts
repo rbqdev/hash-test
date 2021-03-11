@@ -38,6 +38,7 @@ describe("Hook: useFetch", () => {
   });
 
   afterEach(() => {
+    //@ts-ignore
     fetch.resetMocks();
   });
 
@@ -88,11 +89,13 @@ describe("Hook: useFetch", () => {
 
   describe("when call 'dispatchRequest()'", () => {
     beforeEach(() => {
+      // @ts-ignore
       fetch.mockClear();
     });
 
     describe("if success", () => {
       beforeEach(async () => {
+        // @ts-ignore
         fetch.mockReturnValue({ json: () => mockResponse, ok: true });
 
         const {
@@ -107,8 +110,11 @@ describe("Hook: useFetch", () => {
       });
 
       it("should called with params passed", () => {
-        expect(fetch.mock.calls[0][0]).toEqual(mockUrl);
-        expect(fetch.mock.calls[0][1]).toEqual({
+        // @ts-ignore
+        const fetchCalls = fetch.mock.calls[0];
+
+        expect(fetchCalls[0]).toEqual(mockUrl);
+        expect(fetchCalls[1]).toEqual({
           headers: { "Content-Type": "application/json" },
           method: "POST",
           body: JSON.stringify(mockBody)
@@ -127,6 +133,7 @@ describe("Hook: useFetch", () => {
       ])(
         "should set the prop 'error' and call 'toast' passing status from api",
         async (status, message) => {
+          // @ts-ignore
           fetch.mockReturnValue({ status, ok: false });
 
           const {
