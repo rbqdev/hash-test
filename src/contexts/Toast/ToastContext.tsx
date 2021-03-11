@@ -9,7 +9,7 @@ interface IToastContext {
 
 const ToastContext = React.createContext({} as IToastContext);
 
-let idCounter = 1;
+let idCounter = 0;
 
 export const ToastProvider: React.FunctionComponent = ({ children }) => {
   const [toasts, setToasts] = useState([] as ToastProps[]);
@@ -27,12 +27,12 @@ export const ToastProvider: React.FunctionComponent = ({ children }) => {
 
   const dispatchToast = useCallback(
     ({ message, duration, type }: ToastProps) => {
+      incrementIdCounter();
+
       setToasts(oldToasts => [
         ...oldToasts,
         { id: idCounter, message, duration, type }
       ]);
-
-      incrementIdCounter();
 
       const hasDuration = duration !== -1;
       if (hasDuration) {
