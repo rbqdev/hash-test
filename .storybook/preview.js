@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useDarkMode } from 'storybook-dark-mode';
+import { ToastProvider } from "@contexts/Toast";
 
 import {
   light as themeLight,
@@ -10,7 +11,9 @@ import {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={useDarkMode() ? themeDark : themeLight}>
-      <Story />
+      <ToastProvider>
+        <Story />
+      </ToastProvider>
     </ThemeProvider>
   ),
 ];
