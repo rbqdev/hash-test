@@ -24,8 +24,8 @@ const icons = {
 
 export default function Toast({ type, message }: ToastProps) {
   return (
-    <Styled.Wrapper type={type}>
-      <Styled.Icon data-testid={type}>{icons[type]}</Styled.Icon>
+    <Styled.Wrapper type={type} data-testid={`toast-${type}`}>
+      <Styled.Icon>{icons[type]}</Styled.Icon>
       <Styled.Message>{message}</Styled.Message>
     </Styled.Wrapper>
   );

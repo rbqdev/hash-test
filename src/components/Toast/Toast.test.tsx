@@ -16,6 +16,6 @@ describe("Component: Toast", () => {
     ["warning" as ToastType]
   ])("should render icon with type %s passed", type => {
     const { getByTestId } = render(<Toast type={type} message={mockMessage} />);
-    expect(getByTestId(type)).toBeInTheDocument();
+    expect(getByTestId(`toast-${type}`)).toBeInTheDocument();
   });
 });
