@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { CallbackInputPayload } from "@components/InputText";
+import { ICallbackPayload } from "@components/InputText";
 import CalculatorContext from "@contexts/Calculator";
 import Loader from "@components/Loader";
 import InputAmmount from "@components/InputAmmount";
@@ -16,7 +16,7 @@ import getListOfDays from "@utils/getListOfDays";
 import * as Styled from "./CalculatorForm.styles";
 import formRules from "./rules";
 
-interface FormState {
+interface IFormState {
   [key: string]: {
     value: number;
     inputInvalid: boolean;
@@ -34,7 +34,7 @@ function validateInput(name: string, value: number): boolean {
 
 function validateForm(
   callback: (payload: boolean) => void,
-  formValues: FormState
+  formValues: IFormState
 ): void {
   const isFormInvalid = Object.keys(formValues).some(key =>
     validateInput(key, formValues[key].value)
@@ -43,7 +43,7 @@ function validateForm(
 }
 
 export default function CalculatorForm() {
-  const [formValues, setFormValues] = useState<FormState>({
+  const [formValues, setFormValues] = useState<IFormState>({
     [NAME_AMMOUNT]: DeafaultFormValues,
     [NAME_INSTALLMENTS]: DeafaultFormValues,
     [NAME_MDR]: DeafaultFormValues
@@ -53,7 +53,7 @@ export default function CalculatorForm() {
     CalculatorContext
   );
 
-  const handleChangeInput = ({ value, name }: CallbackInputPayload): void => {
+  const handleChangeInput = ({ value, name }: ICallbackPayload): void => {
     const numberValue = Number(value);
 
     setFormValues({

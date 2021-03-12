@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { darken, lighten } from "polished";
 import { _constants as themeConstants } from "@styles/themes";
-import { CustomInputProps } from ".";
+import { ICustomInput } from ".";
 
 const { THEME_LIGHT } = themeConstants;
 
-type InputErrorProp = Pick<CustomInputProps, "error">;
+type InputErrorProp = Pick<ICustomInput, "error">;
 
 export const Wrapper = styled.div`
   display: flex;

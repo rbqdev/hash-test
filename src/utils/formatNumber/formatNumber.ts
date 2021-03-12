@@ -1,5 +1,6 @@
 import getOnlyDigits from "@utils/getOnlyDigits";
-interface FormatNumber {
+
+interface IFormatNumber {
   value: string;
   style: string;
   customOptions?: object;
@@ -23,7 +24,7 @@ export default function formatNumber({
   value,
   style,
   customOptions
-}: FormatNumber): string {
+}: IFormatNumber): string {
   const formatter = Intl.NumberFormat("pt-BR", {
     style,
     ...customOptions

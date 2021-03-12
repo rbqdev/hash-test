@@ -2,21 +2,21 @@ import React, { useReducer } from "react";
 import useToast from "@hooks/useToast";
 import getMessageByApiStatus from "@utils/getMessageByApiStatus";
 
-export interface ObjectFetch {
+export interface IObjectFetch {
   [key: string]: any;
 }
 
-export interface InitialState extends ObjectFetch {
-  response: ObjectFetch | null;
-  error: ObjectFetch | null;
+export interface IInitialState extends IObjectFetch {
+  response: IObjectFetch | null;
+  error: IObjectFetch | null;
   isLoading: boolean;
   requestTakeToLong: boolean;
 }
 
-interface ResponseFetch extends InitialState {
+interface ResponseFetch extends IInitialState {
   dispatchRequest: ({ url, method, body }: DispatchRequestProps) => void;
   resetFetchValues: () => void;
-  dispatchState: React.Dispatch<ReducerAction<ObjectFetch>>;
+  dispatchState: React.Dispatch<ReducerAction<IObjectFetch>>;
 }
 
 interface DispatchRequestProps {
@@ -41,7 +41,7 @@ type ReducerAction<T> =
 
 export const TIME_TO_AWAIT_API = 10000;
 
-export const ACTIONS: ObjectFetch = {
+export const ACTIONS: IObjectFetch = {
   RESET_VALUES: EnumActionTypes.reset,
   SET_RESPONSE: EnumActionTypes.response,
   SET_ERROR: EnumActionTypes.error,
@@ -49,14 +49,14 @@ export const ACTIONS: ObjectFetch = {
   SET_REQUEST_TAKE_TO_LONG: EnumActionTypes.requestTakeToLong
 };
 
-export const initialState: InitialState = {
+export const initialState: IInitialState = {
   response: null,
   error: null,
   isLoading: false,
   requestTakeToLong: false
 };
 
-function reducer(state: InitialState, action: ReducerAction<ObjectFetch>) {
+function reducer(state: IInitialState, action: ReducerAction<IObjectFetch>) {
   const isResetAction = action.type === ACTIONS.RESET_VALUES;
   if (isResetAction) {
     return {

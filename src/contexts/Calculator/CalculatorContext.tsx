@@ -1,16 +1,16 @@
 import React, { createContext } from "react";
-import useFetch, { InitialState } from "@hooks/useFetch/useFetch";
+import useFetch, { IInitialState } from "@hooks/useFetch/useFetch";
 import getUrlAnticipation from "@utils/getUrlAnticipation";
 
-interface RequestBody {
+interface IRequestBody {
   amount: number;
   installments: number;
   mdr: number;
   days: number[];
 }
 
-interface ICalculatorContext extends InitialState {
-  requestAnticipation: (payload: RequestBody) => void;
+interface ICalculatorContext extends IInitialState {
+  requestAnticipation: (payload: IRequestBody) => void;
   resetFetchValues: () => void;
 }
 
@@ -26,7 +26,7 @@ export const CalculatorProvider: React.FunctionComponent = ({ children }) => {
     resetFetchValues
   } = useFetch();
 
-  const requestAnticipation = async (payload: RequestBody): Promise<void> => {
+  const requestAnticipation = async (payload: IRequestBody): Promise<void> => {
     const url = getUrlAnticipation();
 
     await dispatchRequest({

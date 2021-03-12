@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import formatNumber, { currencyConfigs } from "@utils/formatNumber";
 import getOnlyDigits from "@utils/getOnlyDigits";
-import InputText, { CustomInputProps } from "@components/InputText";
+import InputText, { ICustomInput } from "@components/InputText";
 
 export const LABEL_AMMOUNT = "Informe o valor da venda *";
 
-function InputAmmount({ callbackFunction, name, error }: CustomInputProps) {
+function InputAmmount({ callbackFunction, name, error }: ICustomInput) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {

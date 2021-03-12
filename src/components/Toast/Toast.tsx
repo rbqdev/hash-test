@@ -8,7 +8,7 @@ import * as Styled from "./Toast.styles";
 
 export type ToastType = "success" | "error" | "warning" | "info";
 
-export interface ToastProps {
+export interface IToast {
   id?: number;
   type: ToastType;
   message: string;
@@ -22,7 +22,7 @@ const icons = {
   info: <IoMdInformation />
 };
 
-export default function Toast({ type, message }: ToastProps) {
+export default function Toast({ type, message }: IToast) {
   return (
     <Styled.Wrapper type={type} data-testid={`toast-${type}`}>
       <Styled.Icon>{icons[type]}</Styled.Icon>

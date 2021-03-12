@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from "react";
 import { createPortal } from "react-dom";
-import Toast, { ToastProps } from "@components/Toast";
+import Toast, { IToast } from "@components/Toast";
 
 interface IToastContext {
-  toasts: Toasts[];
-  dispatchToast: (payload: ToastProps) => void;
+  toasts: IToast[];
+  dispatchToast: (payload: IToast) => void;
   removeToast: (id: number) => void;
 }
 
@@ -13,7 +13,7 @@ const ToastContext = React.createContext({} as IToastContext);
 let idCounter = 0;
 
 export const ToastProvider: React.FunctionComponent = ({ children }) => {
-  const [toasts, setToasts] = useState([] as ToastProps[]);
+  const [toasts, setToasts] = useState([] as IToast[]);
 
   const incrementIdCounter = () => {
     idCounter += 1;
@@ -27,7 +27,7 @@ export const ToastProvider: React.FunctionComponent = ({ children }) => {
   );
 
   const dispatchToast = useCallback(
-    ({ message, duration, type }: ToastProps) => {
+    ({ message, duration, type }: IToast) => {
       incrementIdCounter();
 
       setToasts(oldToasts => [

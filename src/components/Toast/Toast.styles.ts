@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { ToastProps } from ".";
+import { IToast } from ".";
 
-type Type = Pick<ToastProps, "type">;
+type Type = Pick<IToast, "type">;
 
 export const Wrapper = styled.div<Type>`
   width: fit-content;

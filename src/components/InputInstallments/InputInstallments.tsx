@@ -1,14 +1,10 @@
 import { useRef } from "react";
-import InputText, { CustomInputProps } from "@components/InputText";
+import InputText, { ICustomInput } from "@components/InputText";
 import getOnlyDigits from "@utils/getOnlyDigits";
 
 export const LABEL_INSTALLMENTS = "Em quantas parcelas *";
 
-function InputInstallments({
-  callbackFunction,
-  name,
-  error
-}: CustomInputProps) {
+function InputInstallments({ callbackFunction, name, error }: ICustomInput) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (): void => {

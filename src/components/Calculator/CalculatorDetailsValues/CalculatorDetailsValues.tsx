@@ -5,7 +5,7 @@ import getTextDay from "@utils/getTextDay";
 import { _commonColors } from "@styles/themes";
 import * as Styled from "./CalculatorDetailsValues.styles";
 
-export interface Props {
+export interface ICalculatorCardValues {
   values: { [key: number]: number | string };
   isLoading: boolean;
 }
@@ -13,7 +13,7 @@ export interface Props {
 export default function CalculatorDetailsValues({
   values = {},
   isLoading = false
-}: Props) {
+}: ICalculatorCardValues) {
   const hasValues = Object.keys(values).length > 0;
   const newListOfDays = Object.keys(values).map(value => Number(value));
   const listOfDays = hasValues ? newListOfDays : getListOfDays();

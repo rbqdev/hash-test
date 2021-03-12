@@ -3,11 +3,12 @@ import CalculatorForm from "@components/Calculator/CalculatorForm";
 import CalculatorDetailsWrapper from "@components/Calculator/CalculatorDetailsWrapper";
 import * as Styled from "./CalculatorCard.styles";
 import { FiWifiOff } from "react-icons/fi";
-interface Props {
+
+interface ICalculatorCard {
   isOffline?: boolean;
 }
 
-export default function CalculatorCard({ isOffline = false }: Props) {
+export default function CalculatorCard({ isOffline = false }: ICalculatorCard) {
   return (
     <CalculatorProvider>
       <Styled.Wrapper>

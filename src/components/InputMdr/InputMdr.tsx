@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import InputText, { CustomInputProps } from "@components/InputText";
+import InputText, { ICustomInput } from "@components/InputText";
 import formatNumber, { percentConfigs } from "@utils/formatNumber";
 import getOnlyDigits from "@utils/getOnlyDigits";
 
 export const LABEL_MDR = "Informe o percentual de MDR *";
 
-function InputMdr({ callbackFunction, name, error }: CustomInputProps) {
+function InputMdr({ callbackFunction, name, error }: ICustomInput) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (): void => {
