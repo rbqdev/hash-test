@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import Toast, { ToastProps } from "@components/Toast";
 
 interface IToastContext {
+  toasts: Toasts[];
   dispatchToast: (payload: ToastProps) => void;
   removeToast: (id: number) => void;
 }
@@ -45,7 +46,7 @@ export const ToastProvider: React.FunctionComponent = ({ children }) => {
   );
 
   return (
-    <ToastContext.Provider value={{ dispatchToast, removeToast }}>
+    <ToastContext.Provider value={{ dispatchToast, removeToast, toasts }}>
       {children}
       {createPortal(
         <>
