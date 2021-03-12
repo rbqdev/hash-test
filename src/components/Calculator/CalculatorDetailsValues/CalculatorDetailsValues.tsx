@@ -14,8 +14,9 @@ export default function CalculatorDetailsValues({
   values = {},
   isLoading = false
 }: ICalculatorCardValues) {
-  const hasValues = Object.keys(values).length > 0;
-  const newListOfDays = Object.keys(values).map(value => Number(value));
+  const keysValues = Object.keys(values);
+  const hasValues = keysValues.length > 0;
+  const newListOfDays = keysValues.map(value => Number(value));
   const listOfDays = hasValues ? newListOfDays : getListOfDays();
 
   return (
