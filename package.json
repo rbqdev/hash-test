@@ -12,9 +12,13 @@
     "cy:open": "cypress open",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "eject": "react-scripts eject"
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/preset-create-react-app": "^3.1.6",
+    "@storybook/react": "^6.1.20",
     "@types/jest": "^26.0.15",
     "@types/node": "^14.14.34",
     "@types/react": "^17.0.3",
