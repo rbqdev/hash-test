@@ -235,7 +235,7 @@ describe("Calculator of Anticipation", () => {
     const status500 = 500;
     const status408 = 408;
 
-    describe("when has param 'customDays'", () => {
+    describe("when there are param 'customDays'", () => {
       beforeEach(() => {
         cy.visit(`${baseUrl}?customDays=[1,25]`);
       });
@@ -249,7 +249,7 @@ describe("Calculator of Anticipation", () => {
       });
     });
 
-    describe("when has param 'internalError'", () => {
+    describe("when there are param 'internalError'", () => {
       beforeEach(() => {
         cy.visit(`${baseUrl}?internalError`);
 
@@ -268,7 +268,7 @@ describe("Calculator of Anticipation", () => {
       });
     });
 
-    describe("when has param 'timeout'", () => {
+    describe("when there are param 'timeout'", () => {
       beforeEach(() => {
         cy.visit(`${baseUrl}?timeout`);
 
@@ -287,7 +287,7 @@ describe("Calculator of Anticipation", () => {
       });
     });
 
-    describe("when has param 'delay'", () => {
+    describe("when there are param 'delay'", () => {
       beforeEach(() => {
         cy.visit(`${baseUrl}?delay=15000`);
 
