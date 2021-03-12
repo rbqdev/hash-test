@@ -1,8 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  stories: ['../src/components/**/*.stories.tsx'],
-  addons: ['@storybook/preset-create-react-app', '@storybook/addon-essentials'],
+  stories: ["../src/components/**/*.stories.tsx"],
+  addons: ["@storybook/preset-create-react-app", "@storybook/addon-essentials", "storybook-dark-mode"],
   webpackFinal: async (config) => {
 
     console.log({ __dirname });

@@ -4,7 +4,7 @@ import CalculatorDetailsWrapper from "@components/Calculator/CalculatorDetailsWr
 import * as Styled from "./CalculatorCard.styles";
 import { FiWifiOff } from "react-icons/fi";
 
-interface ICalculatorCard {
+export interface ICalculatorCard {
   isOffline?: boolean;
 }
 
