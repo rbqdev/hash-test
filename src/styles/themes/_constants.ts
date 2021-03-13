@@ -1,6 +1,6 @@
 const _constants = {
-  THEME_LIGHT: "tLight",
-  THEME_DARK: "tDark",
+  THEME_LIGHT: "light",
+  THEME_DARK: "dark",
   KEY_THEME_STORAGE: "theme"
 };
 
