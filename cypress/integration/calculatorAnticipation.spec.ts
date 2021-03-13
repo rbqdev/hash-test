@@ -3,19 +3,21 @@ import getMessageByApiStatus from "../../src/utils/getMessageByApiStatus";
 
 const baseUrl = "http://localhost:3000/";
 const apiUrl = "https://hash-front-test.herokuapp.com/";
+const inputAmmount = '[name="ammount"]';
+const inputInstallments = '[name="installments"]';
+const inputMdr = '[name="mdr"]';
+const loader = '[role="status"]';
+const toast = '[data-testid="toast-error"]';
+const status500 = 500;
+const status408 = 408;
+
+const triggerForm = () => {
+  cy.get(inputAmmount).type("20000");
+  cy.get(inputInstallments).type("12");
+  cy.get(inputMdr).type("1");
+};
 
 describe("Calculator of Anticipation", () => {
-  const inputAmmount = '[name="ammount"]';
-  const inputInstallments = '[name="installments"]';
-  const inputMdr = '[name="mdr"]';
-  const loader = '[role="status"]';
-
-  const triggerForm = () => {
-    cy.get(inputAmmount).type("20000");
-    cy.get(inputInstallments).type("12");
-    cy.get(inputMdr).type("1");
-  };
-
   describe("with no params on url", () => {
     beforeEach(() => {
       cy.visit(baseUrl);
@@ -159,10 +161,6 @@ describe("Calculator of Anticipation", () => {
       });
 
       describe("if request is error", () => {
-        const toast = '[data-testid="toast-error"]';
-        const status500 = 500;
-        const status408 = 408;
-
         it(`should show toast with message: '${getMessageByApiStatus(
           status500
         )}' with status: ${status500}`, () => {
@@ -231,10 +229,6 @@ describe("Calculator of Anticipation", () => {
   });
 
   describe("with params on url, should simulate api situations", () => {
-    const toast = '[data-testid="toast-error"]';
-    const status500 = 500;
-    const status408 = 408;
-
     describe("when there are param 'customDays'", () => {
       beforeEach(() => {
         cy.visit(`${baseUrl}?customDays=[1,25]`);
