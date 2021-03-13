@@ -2,7 +2,22 @@ import getUrlAnticipation from "./getUrlAnticipation";
 import api from "@configs/api";
 
 const { baseUrl } = api;
-global.window = Object.create(window);
+
+const setUrlParams = (params: string) => {
+  Object.defineProperty(window, "location", {
+    value: {
+      href: `http://test-url/${params}`,
+      search: `${params}`
+    },
+    configurable: true
+  });
+};
+
+const resetUrlParams = () => {
+  //@ts-ignore
+  delete global.window.location;
+  global.window = Object.create(window);
+};
 
 describe("Util: getUrlAnticipation", () => {
   describe("when NOT exists valid params on url", () => {
@@ -11,11 +26,10 @@ describe("Util: getUrlAnticipation", () => {
       expect(urlResult).toBe(baseUrl);
     });
   });
+
   describe("when exists valid params on url", () => {
     beforeEach(() => {
-      //@ts-ignore
-      delete global.window.location;
-      global.window = Object.create(window);
+      resetUrlParams();
     });
 
     test.each([
@@ -23,15 +37,10 @@ describe("Util: getUrlAnticipation", () => {
       [`${baseUrl}?timeout=`, "?timeout"],
       [`${baseUrl}?delay=`, "?delay"]
     ])("should return url: '%s'", (urlExpected, params) => {
-      Object.defineProperty(window, "location", {
-        value: {
-          href: `http://test-url/${params}`,
-          search: `${params}`
-        },
-        configurable: true
-      });
+      setUrlParams(params);
 
       const urlResult = getUrlAnticipation();
+
       expect(urlResult).toBe(urlExpected);
     });
   });
