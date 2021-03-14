@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import CalculatorDetailsValues, { ICalculatorDetailsValues } from ".";
 
 export default {
-  title: "CalculatorDetailsValues",
+  title: "Components/CalculatorDetailsValues",
   component: CalculatorDetailsValues,
   args: {
     values: {

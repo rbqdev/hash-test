@@ -3,7 +3,7 @@ import InputInstallments from ".";
 import { ICustomInput } from "@components/InputText";
 
 export default {
-  title: "InputInstallments",
+  title: "Components/InputInstallments",
   component: InputInstallments,
   args: {
     error: false

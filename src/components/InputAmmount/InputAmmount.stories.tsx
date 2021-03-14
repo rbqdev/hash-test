@@ -3,7 +3,7 @@ import InputAmmount from ".";
 import { ICustomInput } from "@components/InputText";
 
 export default {
-  title: "InputAmmount",
+  title: "Components/InputAmmount",
   component: InputAmmount,
   parameters: {
     docs: {

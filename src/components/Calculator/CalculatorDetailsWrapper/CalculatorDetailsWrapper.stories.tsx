@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import CalculatorDetailsWrapper from ".";
 
 export default {
-  title: "CalculatorDetailsWrapper",
+  title: "Components/CalculatorDetailsWrapper",
   component: CalculatorDetailsWrapper
 } as Meta;
 

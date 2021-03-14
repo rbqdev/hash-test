@@ -9,10 +9,10 @@ import {
 } from "@styles/themes";
 
 export const decorators = [
-  (Story) => (
+  (Story, context) => (
     <ThemeProvider theme={useDarkMode() ? themeDark : themeLight}>
       <ToastProvider>
-        <Story />
+        <Story {...context} />
       </ToastProvider>
     </ThemeProvider>
   ),

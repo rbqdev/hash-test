@@ -2,7 +2,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import InputText, { IInputText, ICustomInput } from ".";
 
 export default {
-  title: "InputText",
+  title: "Components/InputText",
   component: InputText,
   args: {
     label: "InputText",

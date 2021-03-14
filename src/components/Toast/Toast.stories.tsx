@@ -4,7 +4,7 @@ import Toast, { IToast, ToastType } from ".";
 const { default: ToastMd } = require("./Toast.stories.md");
 
 export default {
-  title: "Toast",
+  title: "Components/Toast",
   component: Toast,
   parameters: {
     docs: {

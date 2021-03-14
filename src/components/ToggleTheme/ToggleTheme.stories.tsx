@@ -6,7 +6,7 @@ import { useDarkMode } from "storybook-dark-mode";
 const { THEME_LIGHT, THEME_DARK } = _constants;
 
 export default {
-  title: "ToggleTheme",
+  title: "Components/ToggleTheme",
   component: ToggleTheme,
   args: {
     trigger: null

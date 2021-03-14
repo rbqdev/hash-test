@@ -3,7 +3,7 @@ import InputMdr from ".";
 import { ICustomInput } from "@components/InputText";
 
 export default {
-  title: "InputMdr",
+  title: "Components/InputMdr",
   component: InputMdr,
   parameters: {
     docs: {
