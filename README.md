@@ -23,6 +23,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Períodos de recebimento configuráveis
 - [x] Simulação de erros da api
 - [x] Dark Theme
+- [x] Responsivo
 
 ## Demo
 Você pode ver a demonstração do projeto aqui: [Link da Demo](https://hash-test-app.netlify.app/)
