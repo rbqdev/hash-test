@@ -6,16 +6,16 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-* [React](https://reactjs.org/)
-* [React Loding Skeleton](https://github.com/dvtng/react-loading-skeleton#readme)
-* [React Icons](https://react-icons.github.io/react-icons/)
-* [Typescript](https://www.typescriptlang.org/)
-* [Styled Components](https://styled-components.com/)
-* [Polished](https://polished.js.org/)
-* [Jest](https://jestjs.io/)
-* [Testing Library](https://testing-library.com/)
-* [Cypress](https://www.cypress.io/)
-* [Storybook](https://storybook.js.org/)
+* [React](https://reactjs.org/) - UI framework requerido pelo teste
+* [React Loding Skeleton](https://github.com/dvtng/react-loading-skeleton#readme) - Componentes react para loading animados, criando um efeito interessante ao usuário
+* [React Icons](https://react-icons.github.io/react-icons/) - Repositório com grande variedade de icons em svg, e com possibilidade de importar somente o necessário
+* [Typescript](https://www.typescriptlang.org/) - Superset essencial para o JS/React para adicionar tipagem estática, melhorar o intellisense e prevenir erros de indefinições no código.
+* [Styled Components](https://styled-components.com/) - CSS in JS
+* [Polished](https://polished.js.org/) - Toolset para o CSS, possibilitando coisas como variações das cores definidas no tema default.
+* [Jest](https://jestjs.io/) - Testes unitários
+* [Testing Library](https://testing-library.com/) - Testes unitários com foco no usuário
+* [Cypress](https://www.cypress.io/) - Testes end-to-end
+* [Storybook](https://storybook.js.org/) - Documentação e visualização individual dos componentes, possibilitando ver as varianções dos componentes.
 
 
 ## Features do projeto
