@@ -1,6 +1,6 @@
 <h1 align="center"> Hash Teste Front-end - Calculadora de Antecipação</h1>
 
-<p align="center">Calculadora para antecipação de recebimentos.</p>
+<p align="center">Calculadora para antecipação de recebimentos</p>
 
 ## Tecnologias ultilizadas
 
