@@ -85,6 +85,8 @@ $ yarn storybook
 
 Você deve acessar o projeto passando determinados parâmetros para poder executar algumas simulações.
 
+OBS: Para as simulações do projeto, a abordagem escolhida foi ultilizar parâmetros na url, pois não tinha algo específico no layout que pudesse justificar outras simulações alem da funcionalidade principal.
+
 
 ### Simulando periodos configuráveis:
 
