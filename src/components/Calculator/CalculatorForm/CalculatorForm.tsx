@@ -23,7 +23,7 @@ interface IFormState {
   };
 }
 
-const DeafaultFormValues = {
+const deafaultFormValues = {
   value: 0,
   inputInvalid: false
 };
@@ -44,9 +44,9 @@ function validateForm(
 
 export default function CalculatorForm() {
   const [formValues, setFormValues] = useState<IFormState>({
-    [NAME_AMMOUNT]: DeafaultFormValues,
-    [NAME_INSTALLMENTS]: DeafaultFormValues,
-    [NAME_MDR]: DeafaultFormValues
+    [NAME_AMMOUNT]: deafaultFormValues,
+    [NAME_INSTALLMENTS]: deafaultFormValues,
+    [NAME_MDR]: deafaultFormValues
   });
 
   const { isLoading, requestTakeToLong, requestAnticipation } = useContext(

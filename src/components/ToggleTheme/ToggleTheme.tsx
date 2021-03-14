@@ -9,7 +9,7 @@ export interface IToggleTheme {
   trigger: () => void;
 }
 
-function ToggleTheme({ themeTitle, trigger }: IToggleTheme) {
+export default function ToggleTheme({ themeTitle, trigger }: IToggleTheme) {
   return (
     <Wrapper onClick={trigger} data-testid="btn-toggle-theme">
       {themeTitle !== THEME_LIGHT ? (
@@ -20,5 +20,3 @@ function ToggleTheme({ themeTitle, trigger }: IToggleTheme) {
     </Wrapper>
   );
 }
-
-export default ToggleTheme;

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, memo } from "react";
 import formatNumber, { currencyConfigs } from "@utils/formatNumber";
 import getOnlyDigits from "@utils/getOnlyDigits";
 import InputText, { ICustomInput } from "@components/InputText";
@@ -47,4 +47,4 @@ function InputAmmount({ callbackFunction, name, error }: ICustomInput) {
   );
 }
 
-export default InputAmmount;
+export default memo(InputAmmount);

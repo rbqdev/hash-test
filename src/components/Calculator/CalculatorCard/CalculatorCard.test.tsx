@@ -2,7 +2,7 @@ import render from "@testsUtils/renderWithTheme";
 import CalculatorCard from ".";
 
 describe("Component: CalculatorCard", () => {
-  const regexMessage =
+  const offlineMessage =
     "Você está sem conexão com a internet. Verifique sua conexão e tente novamente mais tarde.";
 
   it("should render component correctly", () => {
@@ -13,7 +13,7 @@ describe("Component: CalculatorCard", () => {
   it("should NOT render message if network is online", () => {
     const { queryByText } = render(<CalculatorCard />);
 
-    const text = queryByText(regexMessage);
+    const text = queryByText(offlineMessage);
 
     expect(text).not.toBeInTheDocument();
   });
@@ -21,7 +21,7 @@ describe("Component: CalculatorCard", () => {
   it("should render message if network is offline", () => {
     const { queryByText } = render(<CalculatorCard isOffline />);
 
-    const text = queryByText(regexMessage);
+    const text = queryByText(offlineMessage);
 
     expect(text).toBeInTheDocument();
   });

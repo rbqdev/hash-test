@@ -17,15 +17,33 @@ const renderComponent = ({ error = false, textInfo = "" } = {}) =>
   );
 
 describe("Component: InputText", () => {
+  let wrapper: RenderResult;
+  let input: HTMLElement;
+
   it("should render component correctly", () => {
     const { baseElement } = renderComponent();
     expect(baseElement).toMatchSnapshot();
   });
 
-  describe("if input is dirty and error prop are 'true'", () => {
-    let wrapper: RenderResult;
-    let input: HTMLElement;
+  describe("if prop 'error' is 'false'", () => {
+    beforeEach(() => {
+      wrapper = renderComponent({ error: false });
+      input = wrapper.getByLabelText(mockLabel);
+    });
 
+    it("should show border with style default", () => {
+      expect(input).toHaveStyle({
+        border: `1px solid ${theme.colors.border}`
+      });
+    });
+
+    it("should NOT render icon error", () => {
+      const iconError = wrapper.queryByTestId("icon-error");
+      expect(iconError).not.toBeInTheDocument();
+    });
+  });
+
+  describe("if prop 'error' is 'true'", () => {
     beforeEach(() => {
       wrapper = renderComponent({ error: true });
       input = wrapper.getByLabelText(mockLabel);
@@ -33,14 +51,14 @@ describe("Component: InputText", () => {
       userEvent.type(input, "0");
     });
 
-    it("should show styles border with input error", () => {
+    it("should show border with style error", () => {
       expect(input).toHaveStyle({
         border: `1px solid ${theme.colors.error}`
       });
     });
 
-    it("should show icon error", () => {
-      const iconError = wrapper.getByTestId("icon-error");
+    it("should render icon error", () => {
+      const iconError = wrapper.queryByTestId("icon-error");
       expect(iconError).toBeInTheDocument();
     });
   });

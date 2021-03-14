@@ -1,9 +1,14 @@
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import InputText, { ICustomInput } from "@components/InputText";
 import formatNumber, { percentConfigs } from "@utils/formatNumber";
 import getOnlyDigits from "@utils/getOnlyDigits";
 
 export const LABEL_MDR = "Informe o percentual de MDR *";
+
+function setInputCaretToPenultimatePosition(element: HTMLInputElement) {
+  const positionCaret = element.value.length - 1;
+  element.setSelectionRange(positionCaret, positionCaret);
+}
 
 function InputMdr({ callbackFunction, name, error }: ICustomInput) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -20,8 +25,7 @@ function InputMdr({ callbackFunction, name, error }: ICustomInput) {
       ...percentConfigs
     });
 
-    const positionCaret = element.value.length - 1;
-    element.setSelectionRange(positionCaret, positionCaret);
+    setInputCaretToPenultimatePosition(element);
 
     if (typeof callbackFunction !== "function") {
       return;
@@ -46,4 +50,4 @@ function InputMdr({ callbackFunction, name, error }: ICustomInput) {
   );
 }
 
-export default InputMdr;
+export default memo(InputMdr);

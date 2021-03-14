@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import InputText, { ICustomInput } from "@components/InputText";
 import getOnlyDigits from "@utils/getOnlyDigits";
 
@@ -40,4 +40,4 @@ function InputInstallments({ callbackFunction, name, error }: ICustomInput) {
   );
 }
 
-export default InputInstallments;
+export default memo(InputInstallments);

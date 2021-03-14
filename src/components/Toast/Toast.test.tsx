@@ -4,7 +4,7 @@ import Toast, { ToastType } from ".";
 describe("Component: Toast", () => {
   const mockMessage = "testMessage";
 
-  it("should render message", () => {
+  it("should render toast with message passed", () => {
     const { queryByText } = render(<Toast type="info" message={mockMessage} />);
     expect(queryByText(mockMessage)).toBeInTheDocument();
   });
@@ -14,7 +14,7 @@ describe("Component: Toast", () => {
     ["error" as ToastType],
     ["info" as ToastType],
     ["warning" as ToastType]
-  ])("should render icon with type %s passed", type => {
+  ])("should render toast with icon type '%s' passed", type => {
     const { getByTestId } = render(<Toast type={type} message={mockMessage} />);
     expect(getByTestId(`toast-${type}`)).toBeInTheDocument();
   });
