@@ -95,13 +95,19 @@ Caso o parâmetro esteja inválido devido algum caractere ou erro de configuraç
 
 Ex: `https://hash-test-app.netlify.app/?timeout`
 
+Após entrar na página com o parâmetro, execute o formulário
+
 ### Simulando Internal Server Error:
 
 Ex: `https://hash-test-app.netlify.app/?internalError`
 
+Após entrar na página com o parâmetro, execute o formulário
+
 ### Simulando Delay de resposta:
 
 Ex: `https://hash-test-app.netlify.app/?delay=tempoEmMilissegundos`
+
+Após entrar na página com o parâmetro, execute o formulário
 
 
 ## Licença
