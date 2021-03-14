@@ -109,6 +109,9 @@ Ex: `https://hash-test-app.netlify.app/?delay=tempoEmMilissegundos`
 
 Após entrar na página com o parâmetro, execute o formulário
 
+### Simulando app offline:
+
+Inspecione o app, vá na aba `network` e coloque a opção de internet como `offline`
 
 ## Licença
 
