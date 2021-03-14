@@ -7,7 +7,7 @@
 As seguintes ferramentas foram usadas na construção do projeto:
 
 * [React](https://reactjs.org/) - UI framework requerido pelo teste
-* [React Loding Skeleton](https://github.com/dvtng/react-loading-skeleton#readme) - Componentes react para loading animados, criando um efeito interessante ao usuário
+* [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton#readme) - Componentes react para loading animados, criando um efeito interessante ao usuário
 * [React Icons](https://react-icons.github.io/react-icons/) - Repositório com grande variedade de icons em svg, e com possibilidade de importar somente o necessário
 * [Typescript](https://www.typescriptlang.org/) - Superset essencial para o JS/React para adicionar tipagem estática, melhorar o intellisense e prevenir erros de indefinições no código.
 * [Styled Components](https://styled-components.com/) - CSS in JS
