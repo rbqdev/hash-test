@@ -48,7 +48,7 @@ Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 | `REACT_APP_API_BASE_URL`     | Sim | `string` | Url da api |
 | `SKIP_PREFLIGHT_CHECK`      | Sim  | `boolean` | Para prevenir erros envolvendo o babel loader impedindo o start do storybook ou até mesmo do proprio server |
 
-Para todos os comandos a seguir você irá precisar estar dentro da pasta do projeto:
+Para todos os comandos a seguir, será preciso que você esteja dentro da pasta do projeto:
 ```bash
 # Acesse a pasta do projeto no terminal/cmd
 $ cd hash-test
