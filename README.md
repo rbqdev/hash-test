@@ -15,7 +15,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * [Jest](https://jestjs.io/) - Testes unitários
 * [Testing Library](https://testing-library.com/) - Testes unitários com foco no usuário
 * [Cypress](https://www.cypress.io/) - Testes end-to-end
-* [Storybook](https://storybook.js.org/) - Documentação e visualização individual dos componentes, possibilitando ver as varianções dos componentes.
+* [Storybook](https://storybook.js.org/) - Documentação e visualização individual dos componentes, possibilitando ver as variações dos componentes.
 
 
 ## Features do projeto
