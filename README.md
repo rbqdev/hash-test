@@ -44,7 +44,7 @@ $ git clone <https://github.com/rbqdev/hash-test.git>
 Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
 | Variável       | Obrigatório? | Tipo  | Descrição |       
-| ------------- |:-------------:|:-------------:| -------------:|
+| ------------- |:-------------:|:-------------:| -------------|
 | `REACT_APP_API_BASE_URL`     | Sim | `string` | Url da api |
 | `SKIP_PREFLIGHT_CHECK`      | Sim  | `boolean` | Para prevenir erros envolvendo o babel loader impedindo o start do storybook ou até mesmo do proprio server |
 
