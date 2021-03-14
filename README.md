@@ -1,4 +1,6 @@
-# Hash Teste Front-end - Calculadora de Antecipação
+<h1 align="center"> Hash Teste Front-end - Calculadora de Antecipação</h1>
+
+<p align="center">Calculadora para antecipação de recebimentos.</p>
 
 ## Tecnologias ultilizadas
 
@@ -23,7 +25,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Dark Theme
 
 ## Demo
-[Link da Demo](https://hash-test-app.netlify.app/)
+Você pode ver a demonstração do projeto aqui: [Link da Demo](https://hash-test-app.netlify.app/)
 
 ## Como rodar a aplicação em modo de desenvolvimento
 
@@ -88,8 +90,6 @@ Você deve acessar o projeto passando determinados parâmetros para poder execut
 Ex: `https://hash-test-app.netlify.app/?customDays=[1,100,200]`
  
 Caso o parâmetro esteja inválido devido algum caractere ou erro de configuração dos valores, será retornado para o usuário os périodos padrões: `[1, 15, 30, 90]`
-
-
 
 ### Simulando Timeout:
 
