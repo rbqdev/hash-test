@@ -2,6 +2,9 @@
 
 <p align="center">Calculadora para antecipação de recebimentos</p>
 
+<p align="center"><img src="https://i.ibb.co/Sf3pfCX/Captura-de-Tela-2021-03-15-a-s-00-28-15.png" /></p>
+
+
 ## Tecnologias ultilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
