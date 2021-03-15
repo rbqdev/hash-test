@@ -12,9 +12,10 @@ type Props = {
 export const Wrapper = styled.article`
   display: flex;
   overflow: auto;
+  width: 100%;
 
-  ${media.greaterThan("medium")`
-    width: 100%;
+  ${media.lessThan("medium")`
+    width: auto;
   `}
 `;
 
@@ -29,10 +30,7 @@ export const WrapperArticle = styled.div<Props>`
     flex-direction: column;
     justify-content: center;
     font-style: italic;
-
-    ${media.greaterThan("medium")`
-      border-radius: 0 4px 4px 0;
-    `}
+    border-radius: 0 4px 4px 0;
 
     ${media.lessThan("medium")`
       width: 100%;
@@ -43,6 +41,7 @@ export const WrapperArticle = styled.div<Props>`
       visibility: hidden;
       z-index: 2;
       transition: all 0.2s;
+      border-radius: 0;
 
       ${
         isMobileVisible &&
