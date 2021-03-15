@@ -132,6 +132,7 @@ exports[`Component: CalculatorCard should render component correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
+  width: 100%;
 }
 
 .c10 {
@@ -150,6 +151,7 @@ exports[`Component: CalculatorCard should render component correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   font-style: italic;
+  border-radius: 0 4px 4px 0;
 }
 
 .c11 {
@@ -203,15 +205,9 @@ exports[`Component: CalculatorCard should render component correctly 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (max-width:768px) {
   .c9 {
-    width: 100%;
-  }
-}
-
-@media (min-width:768px) {
-  .c10 {
-    border-radius: 0 4px 4px 0;
+    width: auto;
   }
 }
 
@@ -226,6 +222,7 @@ exports[`Component: CalculatorCard should render component correctly 1`] = `
     z-index: 2;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+    border-radius: 0;
   }
 }
 
