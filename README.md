@@ -14,11 +14,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * [React Icons](https://react-icons.github.io/react-icons/) - Repositório com grande variedade de icons em svg, e com possibilidade de importar somente os icones necessários
 * [Typescript](https://www.typescriptlang.org/) - Superset essencial para o JS/React para adicionar tipagem estática, melhorar o intellisense, prevenir erros de indefinições no código e entre outros benefícios
 * [Styled Components](https://styled-components.com/) - CSS in JS
-* [Polished](https://polished.js.org/) - Toolset para o CSS, possibilitando coisas como variações das cores definidas no tema default e diversos outros ajustes pontuais no css.
+* [Polished](https://polished.js.org/) - Toolset para o CSS, possibilitando coisas como variações das cores definidas no tema default e diversos outros ajustes pontuais no css
 * [Jest](https://jestjs.io/) - Ferramenta para testes unitários
-* [Testing Library](https://testing-library.com/) - Ferramenta para testes unitários com foco em como o usuário usa de fato a aplicação.
+* [Testing Library](https://testing-library.com/) - Ferramenta para testes unitários com foco em como o usuário usa de fato a aplicação
 * [Cypress](https://www.cypress.io/) - Ferramenta para testes end-to-end
-* [Storybook](https://storybook.js.org/) - Documentação e visualização individual dos componentes, possibilitando ver as variações dos componentes.
+* [Storybook](https://storybook.js.org/) - Documentação e visualização individual dos componentes, possibilitando ver as variações dos componentes
 
 
 ## Features do projeto
