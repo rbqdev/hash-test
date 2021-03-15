@@ -5,7 +5,6 @@ module.exports = {
   addons: ["@storybook/preset-create-react-app", "@storybook/addon-essentials", "storybook-dark-mode"],
   webpackFinal: async (config) => {
 
-    console.log({ __dirname });
     config.resolve = await {
       ...config.resolve,
       alias: {
